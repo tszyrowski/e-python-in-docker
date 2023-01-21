@@ -1,7 +1,7 @@
 Setap for python develpement inside constainers
 ===============================================
 
-# Usage
+## Basic Usage
 Build docker image:
 ```
 docker build -t fastapi-image .
@@ -46,3 +46,15 @@ The `docker-compose` can run multiple services. Note that if anything changed in
 ```
 docker-compose up --build -d
 ```
+
+## Debugging
+
+Debugging is done with **`debugpy`** module. The code update allows to dun debugger. 
+Debugging configuration needs to be done with:
+> `create a launch.json file` -> `Python` -> `Remote Attach` -> `localhost` -> `5678`
+
+After `launch.json` is created the debugging needs to be start with `Start debugging` after right click.
+
+### Container logs
+
+It is worth mentioned that debugging can be dome also through container logs
