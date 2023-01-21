@@ -31,3 +31,11 @@ docker run --name fastapi-container -p 80:80 -d -v ${pwd}:/code fastapi-image
 Although above mounts all correctly, the local dev vscode doesn't have access to installed modules, hence for example autocompletion will not work.
 
 The solution to this is to run **`dev container`** vscode extension and attach to running container.
+
+## Running with docker compose
+
+The single file can stand-up all services. Note the version entry on top of the file. Without it the `docker-compose up` can give errors.
+
+After adding **`docker-compose.yml`** all services can e added with single command:
+`docker-compose up`.</br>
+To stop the services run: `docker-compose down`
