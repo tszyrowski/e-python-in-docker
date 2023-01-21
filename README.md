@@ -39,3 +39,10 @@ The single file can stand-up all services. Note the version entry on top of the 
 After adding **`docker-compose.yml`** all services can e added with single command:
 `docker-compose up`.</br>
 To stop the services run: `docker-compose down`
+
+### multiple services
+
+The `docker-compose` can run multiple services. Note that if anything changed inside `.yml` the `--build` flag needs to be added to the command. Another flag `-d` can be used for detached mode:
+```
+docker-compose up --build -d
+```
